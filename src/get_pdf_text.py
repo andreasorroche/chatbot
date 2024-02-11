@@ -26,7 +26,7 @@ def get_pdf_text(pdf_docs):
             for page in pdf_reader.pages:
                 text += page.extract_text()
         else:
-            print(f'El archivo PDF "{pdf}" no existe en el directorio "/app/data".')
+            raise FileNotFoundError(f'El archivo PDF "{pdf}" no existe en el directorio "/app/data".')
     return text
 
 
