@@ -14,14 +14,19 @@ ejecutar código python.
 # Puntos teóricos
 
 1. Diferencias entre 'completion' y 'chat' models.
+   
 Los modelos de 'completion' generan texto en base a un prompt, mientras que los modelos de 'chat' están optimizados
 para mantener una conversación con contextos de turno.
+
 2. ¿Cómo forzar a que el chatbot responda 'sí' o 'no'?¿Cómo parsear la salida para que siga un formato determinado?
+
 Dándole la orden en el prompt de que únicamente responda con 'sí' o 'no' forzaría al chatbot a responder de esa forma.
 Para parsear la salida y que siga un formato determinado se puede utilizar Output Parsers de LangChain. De esta forma puedes
 generar cualquier forma de datos estructurados. Hay muchos tipos de Output Parsers en LangChain, entre ellos JSON y
 Pydantic, y muchos de ellos admiten streaming.
+
 3. Ventajas e inconvenientes de RAG vs fine-tunning.
+   
 Entre las ventajas del RAG podemos encontrar:
 - Mayor precisión ya que tiene acceso a base de conocimiento externo.
 - Reducción de alucinaciones y sesgos al acceder a fuentes con información factual.
@@ -42,7 +47,9 @@ Los inconvenientes del fine-tuning son:
 - Se requiere de más datos etiquetados y recursos computacionales para entrenar el modelo.
 - Los modelos fine-tuning son más estáticos que RAG, por lo que no se pueden adaptar a datos cambiantes.
 - Puede ser menos transparente en cuanto al proceso de ajuste de parámetros y pesos del modelo a diferencia de RAG.
+  
 4. ¿Cómo evaluar el desempeño de un bot Q&A?¿Cómo evaluar el desempeño de un RAG?
+   
 Para evaluar el desempeño de un bot Q&A, se pueden considerar varios enfoques. Uno de los 
 métodos comunes implica la creación de un conjunto de datos de validación que contiene preguntas representativas y 
 respuestas esperadas. Este conjunto de datos se puede generar manualmente o automáticamente utilizando técnicas como 
