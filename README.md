@@ -33,16 +33,19 @@ Entre las ventajas del RAG podemos encontrar:
 - Adaptabilidad a nuevos datos fácilmente.
 - Identificación de la fuente de la respuesta del modelo, dando mayor calidad y confianza.
 - Requiere menos datos etiquetados y recursos en comparación con el fine-tuning.
+  
 Sin embargo, también tenemos los siguientes inconvenientes de RAG:
 - Menor personalización del modelo, ya que, aunque incorpore información externa, puede no personalizar completamente 
 el estilo de escritura o el comportamiento del modelo.
 - Puede estar más limitado por la información que recupera, en comparación con los modelos completamente generativos.
 - Mayor complejidad por tener que gestionar el modelo generador y el componente de recuperación, en lugar de únicamente
 cargar el modelo.
+
 Por otro lado, encontramos las siguientes ventajas del fine-tuning:
 - Mayor rendimiento en tareas específicas en las que se entrene.
 - Modelos más creativos y flexibles ya que no se cierran tanto a contestar respecto a la información extra en el caso de RAG.
 - Implementación más sencilla ya que implica menos componentes, facilitanto la integración.
+  
 Los inconvenientes del fine-tuning son:
 - Se requiere de más datos etiquetados y recursos computacionales para entrenar el modelo.
 - Los modelos fine-tuning son más estáticos que RAG, por lo que no se pueden adaptar a datos cambiantes.
