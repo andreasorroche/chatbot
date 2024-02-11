@@ -5,10 +5,10 @@ Este chatbot implementado con LangChain tiene las siguientes funcionalidades:
 - Uso como base de conocimiento de un RAG varios documentos PDF largos (un libro de Física y otro de Astronomía)
 , utilizando una base de datos vectorial (FAISS).
 - Memoria dinámica que mantiene la conversación y cuando esta pasa de X tokens se resume de forma automática.
-- Si se detecta una pregunta que necesite de exactitud en la respuesta el modelo ha de ser capaz de implementar y 
-ejecutar código python.
 
 ## Prerrequisitos
+- Python
+- Docker compose
 
 ## Uso
 En la carpeta config se encuentra un archivo settings en el que se pueden modificar dos parámetros. Por un lado se puede 
@@ -18,7 +18,7 @@ Debes añadir un archivo .env en la carpeta docker con la variable de entorno ta
 en el archivo template.env.
 Entonces, desde el directorio de docker debes lanzar el comando:
 
-docker compose up build
+docker compose up --build
 
 
 # Puntos teóricos
