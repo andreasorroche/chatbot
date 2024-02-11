@@ -91,7 +91,7 @@ def main():
     try:
         raw_text = get_pdf_text(pdf_files)
     except FileNotFoundError as e:
-        st.error(f'Error: {e})
+        st.error(f'Error: {e}')
         st.stop()
         
     text_chunks = get_text_chunks(raw_text)
