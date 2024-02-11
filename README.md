@@ -8,7 +8,17 @@ Este chatbot implementado con LangChain tiene las siguientes funcionalidades:
 - Si se detecta una pregunta que necesite de exactitud en la respuesta el modelo ha de ser capaz de implementar y 
 ejecutar código python.
 
+## Prerrequisitos
+
 ## Uso
+En la carpeta config se encuentra un archivo settings en el que se pueden modificar dos parámetros. Por un lado se puede 
+especificar el modelo que se quiere utilizar para el chat (por defecto está gpt-4) y el máximo de tokens a partir
+del cual se resume la memoria.
+Debes añadir un archivo .env en la carpeta docker con la variable de entorno tal y como se especifica
+en el archivo template.env.
+Entonces, desde el directorio de docker debes lanzar el comando:
+
+docker compose up build
 
 
 # Puntos teóricos
