@@ -1,5 +1,3 @@
-from fastapi import HTTPException
-
 import streamlit as st
 
 from config import settings
@@ -87,10 +85,15 @@ def main():
     ]
 
     if not pdf_files:
-        raise HTTPException(
-            status_code=404, detail="No se ha encontrado ningún PDF en el directorio."
-        )
-    raw_text = get_pdf_text(pdf_files)
+        st.error("No se ha encontrado ningún PDF en el directorio.")
+        st.stop()
+        
+    try:
+        raw_text = get_pdf_text(pdf_files)
+    except FileNotFoundError as e:
+        st.error(f'Error: {e})
+        st.stop()
+        
     text_chunks = get_text_chunks(raw_text)
     initialize_session_variables(text_chunks)
 
