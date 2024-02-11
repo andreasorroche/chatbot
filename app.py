@@ -23,6 +23,7 @@ def initialize_session_variables(text_chunks):
     - "text_chunks": A list of text chunks used for dynamic response generation (initialized with the provided
     text_chunks).
     - "responses": A list to store various responses (default: []).
+    - "memory": An object representing the memory buffer for conversation summaries.
 
     :param text_chunks: Pre-processed list of text chunks to be used for dynamic responses.
     """
@@ -40,8 +41,7 @@ def initialize_session_variables(text_chunks):
 
 def initial_greeting():
     """
-    Generates an initial greeting message for the user based on their status.
-    The function personalizes the greeting for new, registered, or enrolled users.
+    Generates an initial greeting message for the user.
     :return: A personalized greeting message as a string.
     """
     greeting = (
@@ -59,6 +59,7 @@ def generate_dynamic_chatbot_response(prompt, chunks):
     and displayed in the chat.
 
     :param prompt: The user's input or prompt to which the chatbot should respond.
+    :param chunks: The list of text chunks used for dynamic response generation.
     """
 
     conversation_chain = conversational_retrieval_chain(chunks)
