@@ -47,7 +47,7 @@ def get_text_chunks(text: str):
 
     Configuration Parameters:
         - separator (str): Newline character ("\n"), used to split the text into chunks.
-        - chunk_size (int): Desired size for each text chunk, set to 1000 characters.
+        - chunk_size (int): Desired size for each text chunk, set to 1500 characters.
         - chunk_overlap (int): Overlap between consecutive chunks, set to 200 characters.
         - length_function (function): Function to measure text length, set to `len`.
     """
