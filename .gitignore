@@ -1,0 +1,3 @@
+# credentials
+*.env
+!docker/template.env

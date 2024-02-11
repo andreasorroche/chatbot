@@ -1,0 +1,9 @@
+version: "0.1"
+services:
+  streamlit:
+    env_file:
+      - .env
+    build:
+      context: ..
+      dockerfile: docker/streamlit.dockerfile
+    network_mode: host
